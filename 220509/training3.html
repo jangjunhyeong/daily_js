@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 온오프 기능 다시 만들어보기 -->
+	<div class="target"></div>
+	<button id="A">Click</button>
+
+
+	<script>
+		const target = document.querySelector(".target");
+		console.log(target);
+		const clickBtn = document.getElementById("A");
+		console.log(clickBtn);
+
+		target.style.width="300px";
+		target.style.height="300px";
+		target.style.backgroundColor="darkslategray";
+
+		let opacityValue = 1;
+		let isStatus = true;
+		target.style.opacity = opacityValue;
+
+		clickBtn.addEventListener('click',function(){
+			// console.log("버튼은 정상적으로 작동합니다.");
+			// 대입과 같다는 전혀 다르다.
+
+			if(isStatus===true){
+				// 변수로 ONOFF를 제어하기
+				// 변수로 스타일값을 줄여가며 제어하기
+
+				let timer = setInterval(function () {
+					console.log(opacityValue);
+					opacityValue=opacityValue-0.1;
+					target.style.opacity=opacityValue;
+
+					if(opacityValue<0){
+						clearInterval(timer);
+						isStatus=false;
+						console.log(isStatus);
+					}
+				},64);
+
+			} else {
+
+				let timer2 = setInterval(function (){
+					console.log(opacityValue);
+					opacityValue=opacityValue + 0.1;
+					target.style.opacity=opacityValue;
+
+					if(opacityValue>1){
+						clearInterval(timer2);
+						isStatus = true;
+						console.log(isStatus);
+					}
+
+				},64)
+			}
+
+			
+		});
+
+
+	</script>
+</body>
+</html>
