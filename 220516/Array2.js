@@ -32,3 +32,12 @@ console.log(Array.from('ganadara'));
 const hi = ["안녕","봉주르","니하오"];
 console.log(Array.isArray(hi));
 //ture
+
+//11. at()
+// 주어진 인덱스의 요소를 반환합니다. 음수값으 지정하면
+//인덱스를 배열의 끝부터 셉니다.
+// 인수 : 숫자
+const num = ['1','2','3','4'];
+let numValue= num.at(1);
+console.log(numValue);
+// 몇번째인지 세주네 값 : 2
