@@ -56,3 +56,14 @@ for (const value of ab) {
 	console.log(value);
 }
 // ...? 무슨 말인지..
+
+const array10 = ['a', 'b', 'c'];
+const iterator = array10.values();
+
+for (const value of iterator) {
+  console.log(value);
+}
+
+// expected output: "a"
+// expected output: "b"
+// expected output: "c"
