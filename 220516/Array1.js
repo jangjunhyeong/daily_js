@@ -8,7 +8,7 @@ fruits.forEach(Element=>console.log(Element));
 //2. push()
 // 배열의  끝에 하나 이상의 요소를 추가하고, 배열의 변경된
 // length를 반환
-// 인수 :문자열, 숫자, 불리언, null, undifined, 함수, 배열 (모두)
+// 인수 :문자열, 숫자, 불리언, null, undefined, 함수, 배열 (모두)
 const m = ["라면","짜장면","울면","냉면"];
 m.push("비빔면");
 console.log(m);
