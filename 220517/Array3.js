@@ -35,7 +35,7 @@ console.log(result);
 // 만족하는 요소가 없으면 -1을 반환
 // 어디에 있는지 세준다.
 // 인수 : 다
-const array1 = ['5','10','15'];
+const array1 = ['5','10','15','20'];
 const numValue2 = (Element) => Element >13;
 console.log(array1.findIndex(numValue2));
 // 2반환 (3번째니까)
